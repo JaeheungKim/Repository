@@ -238,7 +238,9 @@
 				</div>
 				<div class="row">
 				    <div class="col-md-12">
-				        asd
+				        <div class="box">
+				            <div class="box-header"></div>
+				        </div>
 				    </div>
 				</div>
 			</section>
