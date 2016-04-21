@@ -25,34 +25,7 @@
     <![endif]-->
     
     <!-- Custom Style -->
-    <style rel="stylesheet">
-        .radio {
-            float: left;
-            margin-left: 15px;
-        }
-        .margin-right {
-            margin-right : 10px;
-        }
-        .margin-zero {
-           padding : 0;
-           width : 23px;
-           height : 23px;
-        }
-        .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-            vertical-align : middle;
-        }
-        select {
-            padding : 6px 12px;
-        }
-        
-        /* media query
-         * ------------------------------------- */
-        @media (max-width : 980px) {
-            select {
-                margin-top : 12px;
-            }
-        }
-    </style>
+   <link rel="stylesheet" href="../css/admin.css" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<!-- Document -->
@@ -114,7 +87,8 @@
 			<!-- Content Header (Page-header) -->
 			<section class="content-header">
 				<h1>
-					Project&nbsp;List <small>Configuration</small>
+					Project&nbsp;List
+					<small>Configuration</small>
 				</h1>
 			</section>
 			<section class="content">
@@ -376,11 +350,10 @@
 	<script src="../js/jquery.sparkline.min.js"></script>
 	<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
 	<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="../js/jquery.slimscroll.min.js"></script>
-	<!script src="../js/Chart.min.js"></script>
 	<script src="../js/pace.min.js"></script>
-	<!script src="../js/dashboard.js">
-	</script>
+	<!script src="../js/jquery.slimscroll.min.js"></script>
+	<!script src="../js/Chart.min.js"></script>
+	<!script src="../js/dashboard.js"></script>
 	<!script src="../js/demo.js"></script>
 </body>
 </html>

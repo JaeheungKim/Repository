@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.radio {
+    float: left;
+    margin-left: 15px;
+}
+.margin-right {
+    margin-right : 10px;
+}
+.margin-zero {
+   padding : 0;
+   width : 23px;
+   height : 23px;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align : middle;
+}
+select {
+    padding : 6px 12px;
+}
+
+/* media query
+ * ------------------------------------- */
+@media (max-width : 980px) {
+    select {
+        margin-top : 12px;
+    }
+}
