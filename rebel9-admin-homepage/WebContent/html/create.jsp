@@ -276,7 +276,7 @@
 										<div class="radio col-md-12 col-xs-12">
 											<label class="col-md-4 col-xs-3 padding-top" for="award-name">Award Name</label>
 											<div class="col-md-8 col-xs-9">
-												<input type="text" id="award-name" class="form-control" />
+												<input name="c-award-name" type="text" id="award-name" class="form-control" />
 											</div>
 										</div>
 									</div>
@@ -289,7 +289,7 @@
 												<div>
 													<div class="radio">
 														<label>
-															<input class="l-content" type="radio" name="homepage-link" value="N" />
+															<input class="l-content" type="radio" name="c-page-link" value="N" />
 															Disable
 														</label>
 													</div>
@@ -297,7 +297,7 @@
 												<div>
 													<div class="radio">
 														<label>
-															<input class="l-content" type="radio" name="homepage-link" value="Y" />
+															<input class="l-content" type="radio" name="c-page-link" value="Y" />
 															Enable
 														</label>
 													</div>
@@ -310,7 +310,7 @@
 										<div class="radio col-md-8 col-xs-12">
 											<label class="col-md-1 col-xs-1 padding-top padding-left" for="homepage-link">Http://</label>
 											<div class="col-md-9 col-xs-11">
-												<input type="text" id="homepage-link" class="form-control" />
+												<input name="c-page-address" type="text" id="homepage-link" class="form-control" />
 											</div>
 										</div>
 									</div>
@@ -323,7 +323,7 @@
 												<div>
 													<div class="radio">
 														<label>
-															<input class="ml-content" type="radio" name="media-link" value="N" />
+															<input class="ml-content" type="radio" name="c-media-link" value="N" />
 															Disable
 														</label>
 													</div>
@@ -331,7 +331,7 @@
 												<div>
 													<div class="radio">
 														<label>
-															<input class="ml-content" type="radio" name="media-link" value="Y" />
+															<input class="ml-content" type="radio" name="c-media-link" value="Y" />
 															Enable
 														</label>
 													</div>
@@ -344,7 +344,7 @@
 										<div class="radio col-md-8 col-xs-12">
 											<label class="col-md-1 col-xs-1 padding-top padding-left" for="media-link">Http://</label>
 											<div class="col-md-9 col-xs-11">
-												<input type="text" id="media-link" class="form-control" />
+												<input type="text" name="c-media-address" id="media-link" class="form-control" />
 											</div>
 										</div>
 									</div>
@@ -363,7 +363,7 @@
 								<div class="row">
 									<div class="form-group col-md-12">
 										<label>Project Summary</label>
-										<textarea class="form-control" rows="5"></textarea>
+										<textarea name="c-summary" class="form-control" rows="5"></textarea>
 									</div>
 								</div>
 								<div class="row temp">
@@ -440,7 +440,7 @@
 											<img width="150" height="100" src="http://placehold.it/150x100" alt="..." />
 										</div>
 										<div class="col-md-3">
-											<input type="text" class="form-control rep-input" readonly />
+											<input name="c-repre-photo" type="text" class="form-control rep-input" readonly />
 										</div>
 										<div class="col-md-2">
 											<button type="button" class="rep-btn btn btn-primary">Add Image</button>
@@ -453,11 +453,10 @@
 											<label>Thumbnail Photo</label>
 										</div>
 										<div class="col-md-2">
-											<img width="150" height="100"
-												src="http://placehold.it/150x100" alt="..." />
+											<img width="150" height="100" src="http://placehold.it/150x100" alt="..." />
 										</div>
 										<div class="col-md-3">
-											<input type="text" class="form-control thum-input" readonly />
+											<input name="c-thumb-photo" type="text" class="form-control thum-input" readonly />
 										</div>
 										<div class="col-md-2">
 											<button type="button" class="thum-btn btn btn-primary">Add Image</button>
@@ -481,12 +480,14 @@
 											<label>Permission Configuration</label>
 										</div>
 										<div class="radio col-md-2 radio-margin-top">
-											<label> <input type="radio" name="permission-conf" />
+											<label>
+												<input type="radio" name="c-permission-conf" value="Y" />
 												Enable Permission
 											</label>
 										</div>
 										<div class="radio col-md-2 radio-margin-top">
-											<label> <input type="radio" name="permission-conf" />
+											<label>
+												<input type="radio" name="c-permission-conf" value="N" />
 												Disable Permission
 											</label>
 										</div>
@@ -611,7 +612,6 @@
 	    		var status = $(this).is(':checked');
 	    		var valuename = $(this).val();
 	    		var className = $(this).attr('class');
-	    		console.log(valuename);
 	    		if(valuename == 'Y') {
 		    		switch(className) {
 			    		case 'm-content' : 
