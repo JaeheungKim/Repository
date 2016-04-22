@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/AdminLTE.min.css" />
     <link rel="stylesheet" href="../css/_all-skins.min.css" />
     <link rel="stylesheet" href="../css/pace.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -184,7 +185,7 @@
 				                            <div class="input-group-addon">
 				                                <i class="fa fa-calendar"></i>
 				                            </div>
-				                            <input type="text" class="form-control" data-inputmask="'alias' : 'yyyy-mm-dd'" data-mask>
+				                            <input type="text" class="form-control" data-inputmask="'alias' : 'yyyy-mm-dd'" data-mask />
 			                            </div>
 		                            </div>
 	                            </div>
@@ -253,13 +254,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-4">
-                                        <label class="control-label">Media</label>
+                                        <label class="control-label">Awards</label>
                                         <div class="row">
                                             <div class="form-group">
                                                 <div>
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="media" value="N" />
+                                                            <input type="radio" name="Awards" value="N" />
                                                             Disable
                                                         </label>
                                                     </div>
@@ -267,7 +268,7 @@
                                                 <div>
                                                     <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="media" value="Y" />
+                                                            <input type="radio" name="awards" value="Y" />
                                                             Enable
                                                         </label>
                                                     </div>
@@ -275,30 +276,93 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Media Content Hide -->
-                                    <div class="form-group col-md-8">
-                                        <div class="form-group">
-                                            <div>
-                                                <div class="radio">
-                                                    <label>
-                                                        Date
-                                                        <div class="input-group">
-				                                            <div class="input-group-addon">
-				                                                <i class="fa fa-calendar"></i>
-				                                            </div>
-				                                            <input type="text" class="form-control" data-inputmask="'alias' : 'yyyy-mm-dd'" data-mask>
-				                                        </div>
-                                                    </label>
+                                    <!-- Awards Date Hide -->
+                                    <div class="form-group col-md-3 balance">
+                                        <div class="radio">
+                                            <label class="col-md-3 padding-top" for="award-date">Date</label>
+                                            <div class="col-md-9 label-padding">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" id="award-date" class="form-control" data-inputmask="'alias' : 'yyyy-mm-dd'" data-mask />
                                                 </div>
                                             </div>
-                                            <div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="checkbox" name="media-type" value="mobile" />
-                                                        <img height="65" src="../images/mobile.png" alt="mobile" />
-                                                        Mobile
-                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 balance">
+                                        <div class="radio col-md-12">
+                                            <label class="col-md-3 padding-top" for="award-name">Award Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="award-name" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="control-label">Homepage Link</label>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="homepage-link" value="N" />
+                                                            Disable
+                                                        </label>
+                                                    </div>
                                                 </div>
+                                                <div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="homepage-link" value="Y" />
+                                                            Enable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- HomePage Link Hide -->
+                                    <div class="form-group col-md-8 balance">
+                                        <div class="radio col-md-8">
+                                            <label class="col-md-1 padding-top padding-left" for="homepage-link">Http://</label>
+                                            <div class="col-md-9">
+	                                            <input type="text" id="homepage-link" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="control-label">Media Link</label>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="media-link" value="N" />
+                                                            Disable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="media-link" value="Y" />
+                                                            Enable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Media Link Hide -->
+                                    <div class="form-group col-md-8 balance">
+                                        <div class="radio col-md-8">
+                                            <label class="col-md-1 padding-top padding-left" for="media-link">Http://</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="media-link" class="form-control" />
                                             </div>
                                         </div>
                                     </div>
@@ -307,9 +371,108 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Project Content</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label>Project Summary</label>
+                                        <textarea class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+	                                <div class="form-group col-md-12">
+		                                <div class="col-md-1 label-padding">
+											<label>Body</label>
+		                                </div>
+		                                <div class="col-md-1">
+											<span class="content_no">Content1</span>
+										</div>
+										<div class="col-md-1">
+											<span class="templete">Templete</span>
+										</div>
+										<ul class="col-md-9">
+											<li class="col-md-12 li-margin">
+												<div class="col-md-1">
+													<span class="img-txt">Image</span>
+												</div>
+												<div class="col-md-5">
+													<input class="img-input form-control col-md-3" type="text" readonly />
+												</div>
+												<div class="col-md-2">
+													<button class="img-button btn btn-primary pull-right" type="button">Add Image</button>
+												</div>
+											</li>
+                                            <li class="col-md-12">
+	                                            <div class="col-md-1">
+													<span class="t-text">Text</span>
+												</div>
+												<div class="col-md-7">
+													<textarea class="t-textarea form-control" rows="8"></textarea>
+												</div>
+                                            </li>
+                                            <li class="col-md-12">
+	                                            <div class="col-md-1"></div>
+                                                <div class="col-md-4">
+                                                    <span class="help-block">Please enter less than 100 characters.</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+									</div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+	                                    <div class="col-md-1 label-padding">
+	                                        <label>Add Body</label>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="button" class="btn btn-box-tool btn-padding">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    Project Thumbnail
+                                    <small>And Permission</small>
+                                </h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+	                                    <div class="col-md-2 label-padding">                                    
+	                                        <label>Representative Photo</label>
+	                                    </div>
+	                                    <div class="col-md-3"><img src="" alt="" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
+    
+    <!-- File Form -->
+    <form name="file-form" style="display : none" action="#" method="post" enctype="multipart/form-data">
+        <input type="file" style="display : none" class="import-file" />
+        <input type="submit" style="display : none" />
+    </form>
     
     <!-- Script -->
     <script src="../js/jQuery-2.2.0.min.js"></script>
@@ -330,9 +493,24 @@
     
     <!-- Input Date Script -->
 	<script>
-		$(function() {
-			$("[data-mask]").inputmask();
-		});
+	    $(function () {
+	    	// Date Form
+	        $("[data-mask]").inputmask();
+	    	
+	    	// Input[Type=File]
+	        $(".img-button").on('click', function(){
+	            $(".import-file").trigger("click");
+	        });
+	    	
+	    	// Inport File Name
+	    	$('.import-file').on('change', function(){
+	    		var file = this.files[0],
+	            fileName = file.name,  // 파일 이름
+	            fileSize = file.size;  // 파일 사이즈
+	            $('.img-input').val(fileName+' ('+fileSize+'Bytes)');
+	            //alert("Uploading: " + fileName + " @ " + fileSize + "bytes");
+	    	});
+	    });
 	</script>
 
 </body>

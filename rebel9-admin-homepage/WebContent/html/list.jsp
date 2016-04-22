@@ -261,49 +261,86 @@
 								<h3 class="box-title">Project List</h3>
 							</div>
 							<div class="box-body table-responsive no-padding">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-									   <th><input type="checkbox" /></th>
-									   <th>Board_no</th>
-									   <th>Deliverables</th>
-									   <th>Thumbnail</th>
-									   <th>Project name</th>
-									   <th>Finish date</th>
-									   <th>Add date</th>
-									   <th>Permission</th>
-									   <th>Configuration</th>
-									</tr>
-								</thead>
-								<tbody>
-								    <c:forEach begin="1" end="10" step="1">
-								    <tr>
-								        <td><input type="checkbox" /></td>
-								        <td>1</td>
-								        <td>Media</td>
-								        <td><img width="150" height="100" src="http://placehold.it/150x100" alt="..." class=""></td>
-								        <td>서울여자대학교 교사 자료관리시스템</td>
-								        <td>2015-04-04</td>
-								        <td>2015-04-04</td>
-								        <td>승인</td>
-								        <td>
-								            <button type="button" class="btn bg-primary margin-zero">
-                                                <i class="fa fa-chevron-up"></i>
-                                            </button>
-                                            <button type="button" class="btn bg-primary margin-zero">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </button>
-                                            <button type="button" class="btn bg-primary margin-zero">
-                                                <i class="fa fa-unlock"></i>
-                                            </button>
-                                            <button type="button" class="btn bg-primary margin-zero">
-                                                <i class="fa fa-remove"></i>
-                                            </button>
-								        </td>
-								    </tr>
-								    </c:forEach>
-								</tbody>
-							</table>
+								<table class="table table-hover">
+									<thead>
+										<tr>
+										   <th><input type="checkbox" /></th>
+										   <th>Board_no</th>
+										   <th>Deliverables</th>
+										   <th>Thumbnail</th>
+										   <th>Project name</th>
+										   <th>Finish date</th>
+										   <th>Add date</th>
+										   <th>Permission</th>
+										   <th>Configuration</th>
+										</tr>
+									</thead>
+									<tbody>
+									    <c:forEach begin="1" end="10" step="1">
+									    <tr>
+									        <td><input type="checkbox" /></td>
+									        <td>1</td>
+									        <td>Media</td>
+									        <td><img width="150" height="100" src="http://placehold.it/150x100" alt="..." class=""></td>
+									        <td>서울여자대학교 교사 자료관리시스템</td>
+									        <td>2015-04-04</td>
+									        <td>2015-04-04</td>
+									        <td>승인</td>
+									        <td>
+									            <button type="button" class="btn bg-primary margin-zero">
+	                                                <i class="fa fa-chevron-up"></i>
+	                                            </button>
+	                                            <button type="button" class="btn bg-primary margin-zero">
+	                                                <i class="fa fa-chevron-down"></i>
+	                                            </button>
+	                                            <button type="button" class="btn bg-primary margin-zero">
+	                                                <i class="fa fa-unlock"></i>
+	                                            </button>
+	                                            <button type="button" class="btn bg-primary margin-zero">
+	                                                <i class="fa fa-remove"></i>
+	                                            </button>
+									        </td>
+									    </tr>
+									    </c:forEach>
+									</tbody>
+								</table>
+							</div>
+							<div class="box-footer">
+								<div class="row">
+				                    <div class="col-md-12">
+				                        <div class="dataTables_paginate paging_simple_numbers pull-right" id="example1_paginate">
+				                            <ul class="pagination">
+				                                <li class="paginate_button previous" id="example1_previous">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a>
+				                                </li>
+				                                <li class="paginate_button active">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">7</a>
+				                                </li>
+				                                <li class="paginate_button">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="8" tabindex="0">8</a>
+				                                </li>
+				                                <li class="paginate_button next" id="example1_next">
+				                                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a>
+				                                </li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                </div>
 							</div>
 						</div>
 					</div>

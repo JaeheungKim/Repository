@@ -12,11 +12,35 @@
    width : 23px;
    height : 23px;
 }
+.padding-top {
+    padding-top: 5px;
+}
+.col-md-8 .padding-left {
+	padding-left : 0;
+}
+.balance {
+	padding-top: 18px;
+}
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     vertical-align : middle;
 }
 select {
     padding : 6px 12px;
+}
+
+
+/* 본문 및 템플릿 레이아웃 */
+.btn-padding {
+	padding : 0;
+}
+.label-padding {
+	padding-left : 0;
+}
+.t-text, .img-txt, .templete, .content_no, .title {
+    font-weight : bold;
+}
+.li-margin {
+	margin-bottom : 10px;
 }
 
 /* media query
