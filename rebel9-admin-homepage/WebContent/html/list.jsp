@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="../css/AdminLTE.min.css" />
 	<link rel="stylesheet" href="../css/_all-skins.min.css" />
 	<link rel="stylesheet" href="../css/pace.min.css" />
+	<link rel="stylesheet" href="../css/reset.css" />
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -37,8 +38,8 @@
 				<span class="logo-lg"><b>Rebel9</b>&nbsp;Admin</span>
 			</a>
 			<nav class="navbar navbar-static-top">
-				<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
-					role="button"> <span class="sr-only">Toggle navigation</span>
+				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+				    <span class="sr-only">Toggle navigation</span>
 				</a>
 			</nav>
 		</header>
@@ -94,7 +95,7 @@
 			<section class="content">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="box box-primary">
+						<div class="box box-primary search-option">
 							<div class="box-header with-border">
 								<h3 class="box-title">Search Option</h3>
 								<div class="box-tools pull-right">
@@ -220,7 +221,7 @@
 								<div class="row">
 								    <div class="col-md-12">
 								        <button type="button" class="btn btn-primary pull-right margin">Search</button>
-                                        <button type="button" class="btn btn-primary pull-right margin">Reset</button>
+                                        <button type="button" class="btn btn-primary pull-right margin reset-btn">Reset</button>
 								    </div>
 								</div>
 							</div>
@@ -229,8 +230,8 @@
 				</div>
 				<div class="row">
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-primary">Project Add</button>
-                        <button type="button" class="btn btn-danger">Project Delete</button>
+                        <button type="button" class="btn btn-primary go-create-jsp">Project Add</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Project Delete</button>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group pull-right">
@@ -282,7 +283,7 @@
 									        <td>1</td>
 									        <td>Media</td>
 									        <td><img width="150" height="100" src="http://placehold.it/150x100" alt="..." class=""></td>
-									        <td>서울여자대학교 교사 자료관리시스템</td>
+									        <td class="go-create-jsp">서울여자대학교 교사 자료관리시스템</td>
 									        <td>2015-04-04</td>
 									        <td>2015-04-04</td>
 									        <td>승인</td>
@@ -293,10 +294,10 @@
 	                                            <button type="button" class="btn bg-primary margin-zero">
 	                                                <i class="fa fa-chevron-down"></i>
 	                                            </button>
-	                                            <button type="button" class="btn bg-primary margin-zero">
+	                                            <button type="button" class="btn bg-primary margin-zero lock">
 	                                                <i class="fa fa-unlock"></i>
 	                                            </button>
-	                                            <button type="button" class="btn bg-primary margin-zero">
+	                                            <button type="button" class="btn bg-primary margin-zero delete-one-btn"  data-toggle="modal" data-target="#oneDeleteModal">
 	                                                <i class="fa fa-remove"></i>
 	                                            </button>
 									        </td>
@@ -347,8 +348,8 @@
 				</div>
 				<div class="row">
 				    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary">Project Add</button>
-                        <button type="button" class="btn btn-danger">Project Delete</button>
+                        <button type="button" class="btn btn-primary go-create-jsp">Project Add</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Project Delete</button>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group pull-right">
@@ -376,7 +377,43 @@
 		</div>
 	</div>
 	<!-- end wrapper -->
-	<!-- modal -->
+	
+	<!-- Modal -->
+	<!-- 일괄 삭제 Modal -->
+	<div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	                <h4 class="modal-title" id="myModalLabel">Project Delete</h4>
+	            </div>
+	            <div class="modal-body">
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-primary delete-enter-btn">Enter</button>
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 개별 삭제 모달 -->
+	<div class="modal fade bs-example-modal-lg" id="oneDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Project Delete</h4>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to remove the projects?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary one-delete-enter-btn">Enter</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	
 
 	<!-- Script -->
@@ -392,5 +429,62 @@
 	<!script src="../js/Chart.min.js"></script>
 	<!script src="../js/dashboard.js"></script>
 	<!script src="../js/demo.js"></script>
+	
+	<!-- Jquery -->
+    <script>
+        $(function () {
+        	// Reset Btn
+        	$('.reset-btn').on('click',function(){
+        		$('.search-option').find('input').prop('checked', false).val('');
+        	});
+        	
+        	
+        	// 일괄 삭제
+        	$('.btn-danger').on('click',function(){
+        		var count = 0;
+        		$('.delete-enter-btn')
+        		if($('td').find('input').is(':checked') == false) {
+        			$('.delete-enter-btn').css('display','none');
+        			$('#deleteModal').find('.modal-body').text('Please select the project you want to delete .');
+        		} else {
+	        		$('td').each(function(){
+	        			if($(this).find('input').is(':checked')){
+	        				count++;
+	        			}
+	        		});
+	        		$('.delete-enter-btn').css('display','inline-block');
+	        		$('#deleteModal').find('.modal-body').text('Are you sure you want to remove the '+count+' projects?');
+        		}
+        	});
+        	$('.delete-enter-btn').on('click',function(){
+        		alert('테스트');
+        	});
+        	
+        	// 개별 삭제
+        	$('.delete-one-btn').on('click',function(){
+        		var titleText = $(this).parents().prevAll('.title').text();
+        	});
+        	$('.one-delete-enter-btn').on('click',function(){
+        		alert('테스트');
+        	});
+        	
+        	// Lock
+        	$('.lock').on('click',function(){
+        		var hc = $(this).children('i').hasClass('fa-unlock');
+        		if(hc) {
+        			$(this).children('i').removeClass('fa-unlock');
+        			$(this).children('i').addClass('fa-lock');
+        		} else {
+        			$(this).children('i').removeClass('fa-lock');
+                    $(this).children('i').addClass('fa-unlock');
+        		}
+        	});
+        	
+        	// Project Add
+        	$('.go-create-jsp').on('click',function(){
+        		location.href = "create.jsp";
+        	});
+        });
+    </script>
 </body>
 </html>

@@ -1,5 +1,15 @@
 @CHARSET "UTF-8";
-
+.go-create-jsp {
+	cursor : pointer;
+}
+.hide-div {
+	display : none;
+}
+.m-hide, .a-hide, .l-hide, .ml-hide {
+	opacity : 0;
+	filter : alpha(opacity = 0);
+	-ms-filter : alpha("opacity = 0");
+}
 .radio {
     float: left;
     margin-left: 15px;
@@ -27,20 +37,36 @@
 select {
     padding : 6px 12px;
 }
+.pull-center {
+	text-align : center;
+}
 
-
-/* 본문 및 템플릿 레이아웃 */
 .btn-padding {
 	padding : 0;
 }
 .label-padding {
 	padding-left : 0;
 }
+div .label-padding {
+	padding-left : 0;
+}
+div.row .radio-margin-top {
+	margin-top : 0;
+}
 .t-text, .img-txt, .templete, .content_no, .title {
     font-weight : bold;
 }
 .li-margin {
 	margin-bottom : 10px;
+}
+
+
+
+.modal-content {
+	box-shadow : 0 5px 15px rgba(0,0,0,.5);
+    border : 1px solid rgba(0,0,0,.2);
+    border-radius : 6px;
+    outline : 0;
 }
 
 /* media query
