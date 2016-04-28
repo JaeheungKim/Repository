@@ -47,9 +47,12 @@
 			<section class="sidebar">
 				<ul class="sidebar-menu">
 					<li class="header">Menu</li>
-					<li class="treeview"><a href="#"> <i class="fa fa-files-o"></i>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-files-o"></i>
 							<span>Project Configuration</span>
-					</a>
+						</a>
+						<!-- 2dep menu -->
 						<ul class="treeview-menu">
 							<li>
 								<a href="list.jsp">
@@ -63,7 +66,14 @@
 									Project create
 								</a>
 							</li>
-						</ul></li>
+							<li>
+                                <a href="main_project.jsp">
+                                    <i class="fa fa-circle-o"></i>
+                                    Main Project
+                                </a>
+                            </li>
+						</ul>
+					</li>
 					<li class="header">Page</li>
 					<li><a href="#"> <i class="fa fa-circle-o text-yellow"></i>
 							<span>Rebel9 HomePage</span>
@@ -372,38 +382,11 @@
 											<label>Body</label>
 										</div>
 										<div class="col-md-1">
-											<span class="content_no">Content1</span>
+											<span class="content_no">Content</span>
 										</div>
 										<div class="col-md-1">
-											<button type="button" class="btn btn-primary templete" data-toggle="modal" data-target="#templeteModal">Templete</span>
+											<button type="button" class="btn btn-primary margin-minus templete" data-toggle="modal" data-target="#templeteModal">Templete</span>
 										</div>
-										<ul class="col-md-9">
-											<li class="col-md-12 li-margin">
-												<div class="col-md-1">
-													<span class="img-txt">Image</span>
-												</div>
-												<div class="col-md-5">
-													<input class="img-input form-control col-md-3" type="text" readonly />
-												</div>
-												<div class="col-md-2">
-													<button class="img-btn btn btn-primary pull-right" type="button">Add Image</button>
-												</div>
-											</li>
-											<li class="col-md-12">
-												<div class="col-md-1">
-													<span class="t-text">Text</span>
-												</div>
-												<div class="col-md-7">
-													<textarea class="t-textarea form-control" rows="8"></textarea>
-												</div>
-											</li>
-											<li class="col-md-12">
-												<div class="col-md-1"></div>
-												<div class="col-md-4">
-													<span class="help-block">Please enter less than 100 characters.</span>
-												</div>
-											</li>
-										</ul>
 									</div>
 								</div>
 							</div>
@@ -433,23 +416,53 @@
 							<div class="box-body">
 								<div class="row">
 									<div class="form-group col-md-12">
-										<div class="col-md-2 label-padding">
-											<label>Representative Photo</label>
+										<div class="col-md-3 label-padding">
+											<label>Representative Photo or Media</label>
 										</div>
-										<div class="col-md-2">
-											<img width="150" height="100" src="http://placehold.it/150x100" alt="..." />
-										</div>
-										<div class="col-md-3">
-											<input name="c-repre-photo" type="text" class="form-control rep-input" readonly />
-										</div>
-										<div class="col-md-2">
-											<button type="button" class="rep-btn btn btn-primary">Add Image</button>
+										<div class="col-md-5">
+											<div class="radio col-md-2 radio-margin-top label-pa-margin">
+	                                            <label>
+	                                                <input type="radio" name="c-repre-type" value="image" checked />
+	                                                Image
+	                                            </label>
+	                                        </div>
+	                                        <div class="radio col-md-2 radio-margin-top label-pa-margin">
+	                                            <label>
+	                                                <input type="radio" name="c-repre-type" value="video" />
+	                                                Video
+	                                            </label>
+	                                        </div>
 										</div>
 									</div>
 								</div>
+								<div class="row iType">
+									<div class="form-group col-md-12">
+	                                    <div class="col-md-3"></div>
+	                                    <div class="col-md-2">
+	                                        <img width="150" height="100" src="http://placehold.it/150x100" alt="..." />
+	                                    </div>
+	                                    <div class="col-md-3">
+	                                        <input name="c-repre-photo" type="text" class="form-control rep-input" readonly />
+	                                    </div>
+	                                    <div class="col-md-2">
+	                                        <button type="button" class="rep-btn btn btn-primary">Add Image</button>
+	                                    </div>
+	                                </div>
+								</div>
+								<div class="row mType form-group col-md-12 hide-div">
+								    <div class="col-md-3"></div>
+									<div class="col-md-6">
+                                        <div class="radio col-md-12 label-pa-margin">
+                                            <label class="col-md-2 p10" for="homepage-link">Http://</label>
+                                            <div class="col-md-10 col-xs-11">
+                                                <input name="c-page-address col-md-12" type="text" id="homepage-link" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
 								<div class="row">
 									<div class="form-group col-md-12">
-										<div class="col-md-2 label-padding">
+										<div class="col-md-3 label-padding">
 											<label>Thumbnail Photo</label>
 										</div>
 										<div class="col-md-2">
@@ -514,25 +527,25 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Project Delete</h4>
+                                <h4 class="modal-title" id="myModalLabel">Project Templete</h4>
                             </div>
                             <div class="modal-body">
 	                            <div class="row">
 		                            <div class="form-group col-md-12">
 	                                    <div class="col-md-4 pull-center">
-				                            <button type="button" class="btn btn-primary">
+				                            <button type="button" class="btn btn-primary templete-type" id="templete-a">
 					                            <i class="fa fa-file-text"></i>
 				                            </button>
 				                            A Type
 	                                    </div>
 	                                    <div class="col-md-4 pull-center">
-	                                        <button type="button" class="btn btn-primary">
+	                                        <button type="button" class="btn btn-primary templete-type" id="templete-b">
 	                                            <i class="fa fa-file-text"></i>
 	                                        </button>
 	                                        B Type
 	                                    </div>
 	                                    <div class="col-md-4 pull-center">
-	                                        <button type="button" class="btn btn-primary">
+	                                        <button type="button" class="btn btn-primary templete-type" id="templete-c">
 	                                            <i class="fa fa-file-text"></i>
 	                                        </button>
 	                                        C Type
@@ -542,7 +555,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <div class="col-md-4 pull-center">
-                                            <button type="button" class="btn btn-primary">
+                                            <button type="button" class="btn btn-primary templete-type" id="templete-d">
                                                 <i class="fa fa-file-text"></i>
                                             </button>
                                             D Type
@@ -567,6 +580,77 @@
                 </div>
 			</section>
 		</div>
+	</div>
+	
+	<!-- Templete -->
+	<div class="hide-div all-templete">
+		<ul class="col-md-9 templete-a">
+		    <li class="col-md-12">
+		        <div class="col-md-1">
+		            <span class="t-text">A Type</span>
+		        </div>
+		        <div class="col-md-7">
+		            <textarea class="t-textarea form-control" rows="8"></textarea>
+		        </div>
+		    </li>
+		    <li class="col-md-12">
+		        <div class="col-md-1"></div>
+		        <div class="col-md-4">
+		            <span class="help-block">Please enter less than 100 characters.</span>
+		        </div>
+		    </li>
+		</ul>
+		<ul class="col-md-9 templete-b">
+		    <li class="col-md-12">
+		        <div class="col-md-1">
+		            <span class="t-text">B Type</span>
+		        </div>
+		        <div class="col-md-7">
+		            <textarea class="t-textarea form-control" rows="8"></textarea>
+		        </div>
+		    </li>
+		    <li class="col-md-12">
+		        <div class="col-md-1"></div>
+		        <div class="col-md-4">
+		            <span class="help-block">Please enter less than 100 characters.</span>
+		        </div>
+		    </li>
+		</ul>
+		<ul class="col-md-9 templete-c">
+		    <li class="col-md-12 li-margin">
+		        <div class="col-md-1">
+		            <span class="img-txt">C Type</span>
+		        </div>
+		        <div class="col-md-5">
+		            <input class="img-input form-control col-md-3 margin-minus" type="text" readonly />
+		        </div>
+		        <div class="col-md-2">
+		            <button class="img-btn btn btn-primary pull-right margin-minus" type="button">Add Image</button>
+		        </div>
+		    </li>
+		    <li class="col-md-12">
+		        <div class="col-md-1"></div>
+		        <div class="col-md-4">
+		            <span class="help-block">Please insert the image.</span>
+		        </div>
+		    </li>
+		</ul>
+		<ul class="col-md-9 templete-d">
+		    <li class="col-md-12 li-margin">
+		        <div class="col-md-1">
+		            <span class="img-txt">D Type</span>
+		        </div>
+		        <div class="col-md-5">
+		            <input class="img-input form-control col-md-3 margin-minus" type="text" placeholder="http://" />
+		        </div>
+		    </li>
+		    <li class="col-md-12">
+		        <div class="col-md-1"></div>
+		        <div class="col-md-4">
+		            <span class="help-block">Please enter the link vimeo.</span>
+		        </div>
+		    </li>
+		</ul>
 	</div>
 
 	<!-- File Form -->
@@ -602,110 +686,6 @@
     <!script src="../js/demo.js"></script>
     
     <!-- Jquery -->
-	<script>
-	    $(function () {
-	    	// Date Form
-	        $("[data-mask]").inputmask();
-	    	
-	    	// Show Hide Toggle
-	    	$('input[type=radio]').on('change',function(){
-	    		var status = $(this).is(':checked');
-	    		var valuename = $(this).val();
-	    		var className = $(this).attr('class');
-	    		if(valuename == 'Y') {
-		    		switch(className) {
-			    		case 'm-content' : 
-			    			$('.m-hide').removeClass('hide-div').stop(false, true).animate({opacity : 1});
-			    			break;
-			    		case 'a-content' :
-			    			$('.a-hide').removeClass('hide-div').stop(false, true).animate({opacity : 1});
-			    			break;
-			    		case 'l-content' :
-			    			$('.l-hide').removeClass('hide-div').stop(false, true).animate({opacity : 1});
-			    			break;
-			    		case 'ml-content' :
-			    			$('.ml-hide').removeClass('hide-div').stop(false, true).animate({opacity : 1});
-			    			break;
-			    		default : 
-			    			break;
-		    		}
-	    		} else {
-	    			switch(className) {
-                    case 'm-content' : 
-                        $('.m-hide').stop(false, true).animate({opacity : 0},function(){$(this).addClass('hide-div');});
-                        $('.m-hide').find('input').val('').prop('checked', false);
-                        break;
-                    case 'a-content' :
-                        $('.a-hide').stop(false, true).animate({opacity : 0},function(){$(this).addClass('hide-div');});
-                        $('.a-hide').find('input').val('').prop('checked', false);
-                        break;
-                    case 'l-content' :
-                        $('.l-hide').stop(false, true).animate({opacity : 0},function(){$(this).addClass('hide-div');});
-                        $('.l-hide').find('input').val('').prop('checked', false);
-                        break;
-                    case 'ml-content' :
-                        $('.ml-hide').stop(false, true).animate({opacity : 0},function(){$(this).addClass('hide-div');});
-                        $('.ml-hide').find('input').val('').prop('checked', false);
-                        break;
-                    default : 
-                        break;
-                    }
-	    		}
-	    	});
-	    	
-	    	// Addition Templete
-	    	var tempCount = 1;
-	    	$('.add-templete').on('click',function(){
-	    		tempCount++;
-	    		$('.temp-body').append(
-		    		'<div class="row temp no add-temp">'+$('.temp').html()+'</div>'
-	    		);
-	    		$('.temp-body').find('.no').find('.content_no').text('Content'+tempCount);
-	    		$('.temp-body').find('.no').removeClass('no');
-	    	});
-	    	
-	    	// Input[Type=File]
-	        $(".img-btn").on('click', function(){
-                $(".import-file").trigger("click");
-            });
-	        $(".rep-btn").on('click', function(){
-                $(".rep-import-file").trigger("click");
-            });
-	        $(".thum-btn").on('click', function(){
-                $(".thum-import-file").trigger("click");
-            });
-	    	
-	    	// Inport File Name
-	        $('.import-file').on('change', function(){
-                var file = this.files[0],
-                fileName = file.name,  // 파일 이름
-                fileSize = file.size;  // 파일 사이즈
-                $('.img-input').val(fileName+' ('+fileSize+'Bytes)');
-                //alert("Uploading: " + fileName + " @ " + fileSize + "bytes");
-            });
-	        $('.rep-import-file').on('change', function(){
-                var file = this.files[0],
-                fileName = file.name,  // 파일 이름
-                fileSize = file.size;  // 파일 사이즈
-                $('.rep-input').val(fileName+' ('+fileSize+'Bytes)');
-                //alert("Uploading: " + fileName + " @ " + fileSize + "bytes");
-            });
-	        $('.thum-import-file').on('change', function(){
-                var file = this.files[0],
-                fileName = file.name,  // 파일 이름
-                fileSize = file.size;  // 파일 사이즈
-                $('.thum-input').val(fileName+' ('+fileSize+'Bytes)');
-                //alert("Uploading: " + fileName + " @ " + fileSize + "bytes");
-            });
-	        
-	        // Reset Button
-	        $('.reset-btn').on('click',function(){
-	        	$('body').find('input').val('').prop('checked', false);
-	        	$('body').find('textarea').val('');
-	        	$('.add-temp').remove();
-	        	tempCount = 1;
-	        });
-	    });
-	</script>
+	<script src="../js/app.js"></script>
 </body>
 </html>

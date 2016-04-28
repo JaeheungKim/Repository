@@ -55,17 +55,23 @@
 						<!-- 2dep menu -->
 						<ul class="treeview-menu">
 							<li>
-								<a href="list.jsp">
-									<i class="fa fa-circle-o"></i>
-									Project list
-								</a>
-							</li>
+                                <a href="list.jsp">
+                                    <i class="fa fa-circle-o"></i>
+                                    Project list
+                                </a>
+                            </li>
 							<li>
 								<a href="create.jsp">
 									<i class="fa fa-circle-o"></i>
 									Project create
 								</a>
 							</li>
+							<li>
+                                <a href="main_project.jsp">
+                                    <i class="fa fa-circle-o"></i>
+                                    Main Project
+                                </a>
+                            </li>
 						</ul>
 					</li>
 					<li class="header">Page</li>
@@ -265,7 +271,7 @@
 								<table class="table table-hover">
 									<thead>
 										<tr>
-										   <th><input type="checkbox" /></th>
+										   <th><input type="checkbox" class="all-check" /></th>
 										   <th>Board_no</th>
 										   <th>Deliverables</th>
 										   <th>Thumbnail</th>
@@ -425,66 +431,15 @@
 	<script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
 	<script src="../js/jquery-jvectormap-world-mill-en.js"></script>
 	<script src="../js/pace.min.js"></script>
+	<script src="../js/jquery.inputmask.js"></script>
+    <script src="../js/jquery.inputmask.date.extensions.js"></script>
+    <script src="../js/jquery.inputmask.extensions.js"></script>
 	<!script src="../js/jquery.slimscroll.min.js"></script>
 	<!script src="../js/Chart.min.js"></script>
 	<!script src="../js/dashboard.js"></script>
 	<!script src="../js/demo.js"></script>
 	
 	<!-- Jquery -->
-    <script>
-        $(function () {
-        	// Reset Btn
-        	$('.reset-btn').on('click',function(){
-        		$('.search-option').find('input').prop('checked', false).val('');
-        	});
-        	
-        	
-        	// 일괄 삭제
-        	$('.btn-danger').on('click',function(){
-        		var count = 0;
-        		$('.delete-enter-btn')
-        		if($('td').find('input').is(':checked') == false) {
-        			$('.delete-enter-btn').css('display','none');
-        			$('#deleteModal').find('.modal-body').text('Please select the project you want to delete .');
-        		} else {
-	        		$('td').each(function(){
-	        			if($(this).find('input').is(':checked')){
-	        				count++;
-	        			}
-	        		});
-	        		$('.delete-enter-btn').css('display','inline-block');
-	        		$('#deleteModal').find('.modal-body').text('Are you sure you want to remove the '+count+' projects?');
-        		}
-        	});
-        	$('.delete-enter-btn').on('click',function(){
-        		alert('테스트');
-        	});
-        	
-        	// 개별 삭제
-        	$('.delete-one-btn').on('click',function(){
-        		var titleText = $(this).parents().prevAll('.title').text();
-        	});
-        	$('.one-delete-enter-btn').on('click',function(){
-        		alert('테스트');
-        	});
-        	
-        	// Lock
-        	$('.lock').on('click',function(){
-        		var hc = $(this).children('i').hasClass('fa-unlock');
-        		if(hc) {
-        			$(this).children('i').removeClass('fa-unlock');
-        			$(this).children('i').addClass('fa-lock');
-        		} else {
-        			$(this).children('i').removeClass('fa-lock');
-                    $(this).children('i').addClass('fa-unlock');
-        		}
-        	});
-        	
-        	// Project Add
-        	$('.go-create-jsp').on('click',function(){
-        		location.href = "create.jsp";
-        	});
-        });
-    </script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

@@ -2,6 +2,23 @@
 .go-create-jsp {
 	cursor : pointer;
 }
+.padding-zero {
+	padding-left : 0;
+}
+.w54 {
+	width : 54%;
+}
+label.p10 {
+	padding-left : 10px;
+}
+.margin-minus {
+	margin-top : -6px;
+}
+.content:after {
+	display : block;
+	content : "";
+	clear : both;
+}
 .hide-div {
 	display : none;
 }
@@ -9,6 +26,11 @@
 	opacity : 0;
 	filter : alpha(opacity = 0);
 	-ms-filter : alpha("opacity = 0");
+}
+.mType {
+	opacity : 0;
+    filter : alpha(opacity = 0);
+    -ms-filter : alpha("opacity = 0");
 }
 .radio {
     float: left;
@@ -37,6 +59,12 @@
 select {
     padding : 6px 12px;
 }
+.overflow-text {
+	overflow : hidden;
+	white-space : nowrap;
+	text-overflow : ellipsis;
+	max-width : 150px;
+}
 .pull-center {
 	text-align : center;
 }
@@ -46,6 +74,10 @@ select {
 }
 .label-padding {
 	padding-left : 0;
+}
+.label-pa-margin {
+    padding-left : 0;
+    margin-left : 0;
 }
 div .label-padding {
 	padding-left : 0;
